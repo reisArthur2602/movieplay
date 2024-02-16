@@ -12,10 +12,18 @@ export default {
           '-600': '#9EA5D1',
 				},
 
-				gray: {
+				grey: {
 					'-50': '#EAECF5',
-				},
+				}, 
+
+				
 			},
+
+			fontSize:{
+				cardTitle:{
+					"title" : "1.75rem"
+				}
+			}
 		},
 	},
 	plugins: [],
