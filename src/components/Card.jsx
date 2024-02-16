@@ -2,10 +2,14 @@ import React from 'react';
 import { Image } from './Image';
 import { Rated } from './Rated';
 import { tmdbImageSrc } from '../utils';
+import { Navigate } from 'react-router-dom';
 
-export const Card = ({ title, posterPath, release, rated }) => {
+export const Card = ({ title, posterPath, release, rated, handle }) => {
 	return (
-		<div className="max-w-[17.625rem] flex flex-col gap-6 w-full cursor-pointer hover:animate-pulse">
+		<div
+			className="max-w-[17.625rem] flex flex-col gap-6 w-full cursor-pointer hover:animate-pulse"
+			onClick={handle}
+		>
 			{/* image */}
 			<Image src={tmdbImageSrc(posterPath)} className="w-full h-[25rem]" />
 

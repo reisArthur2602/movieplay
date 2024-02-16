@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from '../Card';
 import { getPopularMovies } from '../../utils';
+import { useNavigate } from 'react-router-dom';
 
 export const Home = () => {
 	const [movies, setMovies] = useState([]);
@@ -10,6 +11,8 @@ export const Home = () => {
     setMovies(data)
 
   };
+
+  const navigate = useNavigate()
 
 	// const fetchMovies = () => {
 	// 	const ItemMovies = [];
@@ -32,9 +35,9 @@ export const Home = () => {
 
   console.log(movies)
 	return (
-		<main className="flex gap-6 flex-wrap justify-center">
+		<main className="flex gap-6 flex-wrap justify-center py-12">
 			{movies.map((movie) => (
-				<Card key={movie.id} {...movie} />
+				<Card key={movie.id} {...movie} handle={()=>navigate(`/filme/${movie.id}`)}/>
 			))}
 		</main>
 	);
