@@ -1,5 +1,5 @@
 export * from './Home';
 export * from './Details';
-// export * from '';
+export * from './Favorites';
 // export * from '';
 // export * from '';

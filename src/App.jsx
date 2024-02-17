@@ -8,13 +8,9 @@ export const App = () => {
 	return (
 		<BrowserRouter>
 			<Container>
-
 				<Header />
-        
 				<AppRoutes />
-
 			</Container>
-
 		</BrowserRouter>
 	);
 };

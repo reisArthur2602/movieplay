@@ -1,9 +1,12 @@
 import React from 'react';
 import { Logo } from '../Logo';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { HiOutlineHeart } from 'react-icons/hi';
+import { Button } from '../Button';
 
 export const Header = () => {
+	const navigate = useNavigate();
+
 	return (
 		<>
 			<header className="flex justify-between py-[4.0313rem] items-center">
@@ -13,26 +16,10 @@ export const Header = () => {
 				</NavLink>
 
 				{/* favoritos */}
-
-				<NavLink
-					className="
-					rounded-full 
-					border-2 
-					border-solid
-					 border-bluegray--700 
-					 py-4 
-					 px-5 flex 
-					 items-center 
-					 gap-2
-					  text-bluegray--600 
-						text-xl 
-						font-bold 
-						hover:animate-pulse"
-					to="/filme"
-				>
+				<Button handle={() => navigate('/favoritos')}>
 					<HiOutlineHeart size={22} />
 					Favoritos
-				</NavLink>
+				</Button>
 			</header>
 		</>
 	);
