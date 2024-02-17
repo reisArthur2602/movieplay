@@ -4,6 +4,8 @@ import { getDetailMovies, tmdbImageSrc } from '../../utils';
 import { Image } from '../Image';
 import { Rated } from '../Rated';
 import { ImSpinner8 } from 'react-icons/im';
+import { Button } from '../Button';
+import { HiOutlineBookmark } from 'react-icons/hi';
 
 export const Details = () => {
 	const { id } = useParams();
@@ -38,22 +40,31 @@ export const Details = () => {
 								{details.title}
 							</h2>
 							{/* tagline */}
-							<p className="text-xl">{details.tagline}</p>
+							<p className="text-base">{details.tagline}</p>
 						</div>
 
+						{/* genres */}
+						<div className='flex flex-wrap gap-2 items-center'>
+							{details.genres.map(g => (<span className='py-2 px-3 text-grey--50 font-semibold rounded-full bg-[#3538CD]'>{g}</span>))}
+						</div>
 						{/* sinopse */}
 						<div className="flex flex-col gap-2">
-							<h2 className="text-2xl text-grey--50 font-semibold ">Sinopse</h2>
-							<p className="text-xl">{details.description}</p>
+							<h2 className="text-xl text-grey--50 font-semibold ">Sinopse</h2>
+							<p className="text-base">{details.description}</p>
 						</div>
 
-						<p className="text-2xl text-grey--50 font-semibold">
+						<p className="text-xl text-grey--50 font-semibold">
 							Lançamento:{' '}
 							<span className="font-normal text-bluegray--800 text-xl">
 								{details.release}
 							</span>
 						</p>
 						<Rated value={details.rated} />
+
+						<Button className="bg-bluegray--900 max-w-[170px]">
+							<HiOutlineBookmark size={20} />
+							Adicionar
+						</Button>
 					</div>
 				</section>
 			) : (
