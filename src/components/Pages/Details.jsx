@@ -10,7 +10,6 @@ import { HiOutlineBookmark } from 'react-icons/hi';
 export const Details = () => {
 	const { id } = useParams();
 	const [details, setDetails] = useState();
-
 	const fetchDetails = async () => {
 		const data = await getDetailMovies(id);
 		setDetails(data);
@@ -20,7 +19,18 @@ export const Details = () => {
 		fetchDetails();
 	}, []);
 
-	console.log(details);
+	const SaveMovie = () => {
+		const ListMovies = JSON.parse(localStorage.getItem('@movies')) || [];
+
+		const HasMovie = ListMovies.some((movie) => movie.id === details.id);
+
+		if (!HasMovie) {
+			ListMovies.push(details);
+			localStorage.setItem('@movies', JSON.stringify(ListMovies));
+		} else {
+			alert('Esse filme já está na sua lista!');
+		}
+	};
 
 	return (
 		<main className="py-12">
@@ -44,8 +54,15 @@ export const Details = () => {
 						</div>
 
 						{/* genres */}
-						<div className='flex flex-wrap gap-2 items-center'>
-							{details.genres.map(g => (<span className='py-2 px-3 text-grey--50 font-semibold rounded-full bg-[#3538CD]'>{g}</span>))}
+						<div className="flex flex-wrap gap-2 items-center">
+							{details.genres.map((g) => (
+								<span
+									className="py-2 px-4 text-grey--50 font-semibold rounded-full bg-[#3538CD]"
+									key={g}
+								>
+									{g}
+								</span>
+							))}
 						</div>
 						{/* sinopse */}
 						<div className="flex flex-col gap-2">
@@ -61,7 +78,10 @@ export const Details = () => {
 						</p>
 						<Rated value={details.rated} />
 
-						<Button className="bg-bluegray--900 max-w-[170px]">
+						<Button
+							className="bg-bluegray--900 max-w-[170px]"
+							handle={SaveMovie}
+						>
 							<HiOutlineBookmark size={20} />
 							Adicionar
 						</Button>

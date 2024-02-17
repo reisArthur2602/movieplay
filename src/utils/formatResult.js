@@ -11,6 +11,7 @@ export const formatResultMovies = (obj) => {
 
 export const formatResultDetails = (obj) => {
 	return {
+		id: obj.id,
 		title: obj.title || obj.name,
 		description: obj.overview,
 		posterPath: obj.poster_path,
