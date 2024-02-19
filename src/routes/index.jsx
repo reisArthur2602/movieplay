@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Details, Home, Favorites } from '../components/Pages';
+import { Details,Home,Favorites } from '../Pages';
+
 
 export const AppRoutes = () => {
 	return (

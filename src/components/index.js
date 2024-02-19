@@ -1,4 +1,10 @@
 export * from './Container';
-// export * from '';
-// export * from '';
-// export * from '';
+export * from './Header';
+export * from './Button';
+export * from './Card';
+export * from './CardFavorites';
+export * from './Container';
+export * from './EmptyFavorites';
+export * from './Image';
+export * from './Logo';
+export * from './Rated';

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Logo } from '../Logo';
+import { Logo } from './Logo';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { HiOutlineHeart } from 'react-icons/hi';
-import { Button } from '../Button';
+import { Button } from './Button';
 
 export const Header = () => {
 	const navigate = useNavigate();

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { CardFavorites } from '../CardFavorites';
-import { EmptyFavorites } from '../EmptyFavorites';
+import { CardFavorites, EmptyFavorites } from "../components"
 
 export const Favorites = () => {
 	const [movies, setMovies] = useState([]);

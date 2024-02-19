@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getDetailMovies, tmdbImageSrc } from '../../utils';
-import { Image } from '../Image';
-import { Rated } from '../Rated';
+import { Button,Image,Rated } from '../components';
+import { getDetailMovies,tmdbImageSrc } from '../utils';
+
 import { ImSpinner8 } from 'react-icons/im';
-import { Button } from '../Button';
 import { HiOutlineBookmark } from 'react-icons/hi';
 
 export const Details = () => {
