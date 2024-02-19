@@ -86,6 +86,7 @@ export const Details = () => {
 							Adicionar
 						</Button>
 					</div>
+					
 				</section>
 			) : (
 				<ImSpinner8 size={72} className="block animate-spin mx-auto" />
