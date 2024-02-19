@@ -57,7 +57,7 @@ export const Details = () => {
 						<div className="flex flex-wrap gap-2 items-center">
 							{details.genres.map((g) => (
 								<span
-									className="py-2 px-4 text-grey--50 font-semibold rounded-full bg-[#3538CD]"
+									className="py-2 px-4 text-grey--50 font-semibold rounded-full bg-bluegray--400"
 									key={g}
 								>
 									{g}
