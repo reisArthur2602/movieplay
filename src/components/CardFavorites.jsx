@@ -10,14 +10,14 @@ export const CardFavorites = ({ posterPath, title, release, handle }) => {
 				{/* image */}
 				<Image
 					src={tmdbImageSrc(posterPath)}
-					className="w-[8.75rem] h-[8.75rem]"
+					className="w-[8.75rem] h-[8.75rem] md:w-[4.3125rem] md:h-[4.3125rem]"
 				/>
 				{/* infos */}
 				<div className="flex flex-col">
-					<span className="text-2xl text-grey--50 font-semibold ">
+					<span className="text-2xl text-grey--50 font-semibold md:text-base ">
 						{title}
 					</span>
-					<span className="text-2xl font-regular">{release}</span>
+					<span className="text-2xl font-regular md:text-base">{release}</span>
 				</div>
 			</div>
 			<button onClick={handle} >

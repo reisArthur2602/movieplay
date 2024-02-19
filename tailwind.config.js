@@ -16,12 +16,17 @@ export default {
 					'-50': '#EAECF5',
 				},
 			},
-
 			fontSize: {
 				cardTitle: {
 					title: '1.75rem',
 				},
 			},
+		},
+
+		screens: {
+			'sm': {'max': '52.125rem'} ,
+
+			"md":{ 'max':'26.75rem'},
 		},
 	},
 	plugins: [],

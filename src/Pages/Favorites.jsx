@@ -24,11 +24,11 @@ export const Favorites = () => {
 			{movies.length === 0 ? (
 				<EmptyFavorites />
 			) : (
-				<section className="max-w-[50rem] w-full mx-auto flex items-center justify-center flex-col gap-[4.5rem]">
-					<h1 className="text-[64px] font-bold text-bluegray--400 uppercase">
+				<section className="max-w-[50rem] w-full mx-auto flex items-center justify-center flex-col gap-[4.375rem] ">
+					<h1 className="text-[4rem] font-bold text-bluegray--400 uppercase md:text-[2.5rem]">
 						Meus Filmes
 					</h1>
-					<div className="flex flex-col gap-8 w-full">
+					<div className="flex flex-col gap-5 w-full">
 						{movies.map((movie) => (
 							<CardFavorites
 								key={movie.id}

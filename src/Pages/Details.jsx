@@ -34,15 +34,15 @@ export const Details = () => {
 	return (
 		<main className="py-12">
 			{details ? (
-				<section className="w-full px-[4.6875rem] flex  items-center gap-[68px]">
+				<section className="w-full px-[4.6875rem] flex items-center gap-[68px] sm:flex-col sm:px-0 ">
 					{/* image */}
 					<Image
 						src={tmdbImageSrc(details.posterPath)}
-						className="w-[25.5rem] h-[40.25rem]"
+						className="w-[25.5rem] h-[40.25rem] sm:w-[18rem] sm:h-[28.375rem]"
 					/>
 
 					{/* infos */}
-					<div className="flex flex-col gap-5 max-w-[31.25rem]">
+					<div className="flex flex-col gap-5 max-w-[31.25rem] sm:max-w-[40.8125rem] ">
 						{/* title */}
 						<div className="flex flex-col gap-2">
 							<h2 className="text-5xl text-grey--50 font-semibold ">

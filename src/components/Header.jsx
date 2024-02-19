@@ -9,7 +9,7 @@ export const Header = () => {
 
 	return (
 		<>
-			<header className="flex justify-between py-[4.0313rem] items-center">
+			<header className="flex justify-between py-[4.0313rem] items-center md:flex-col md:gap-8 md:pb-0 ">
 				{/* logo */}
 				<NavLink to="/">
 					<Logo />
