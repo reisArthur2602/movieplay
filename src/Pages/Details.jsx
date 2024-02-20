@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Button,Image,Rated } from '../components';
-import { getDetailMovies,tmdbImageSrc } from '../utils';
+import { Button, Image, Rated } from '../components';
+import { getDetailMovies, tmdbImageSrc } from '../utils';
 
 import { ImSpinner8 } from 'react-icons/im';
 import { HiOutlineBookmark } from 'react-icons/hi';
@@ -45,7 +45,7 @@ export const Details = () => {
 					<div className="flex flex-col gap-5 max-w-[31.25rem] sm:max-w-[40.8125rem] ">
 						{/* title */}
 						<div className="flex flex-col gap-2">
-							<h2 className="text-5xl text-grey--50 font-semibold ">
+							<h2 className="text-5xl md:text-3xl text-grey--50 font-semibold  ">
 								{details.title}
 							</h2>
 							{/* tagline */}
@@ -65,11 +65,13 @@ export const Details = () => {
 						</div>
 						{/* sinopse */}
 						<div className="flex flex-col gap-2">
-							<h2 className="text-xl text-grey--50 font-semibold ">Sinopse</h2>
-							<p className="text-base">{details.description}</p>
+							<h2 className="text-xl md:text-base text-grey--50 font-semibold ">
+								Sinopse
+							</h2>
+							<p className="text-base md:text-sm">{details.description}</p>
 						</div>
 
-						<p className="text-xl text-grey--50 font-semibold">
+						<p className=" flex items-center gap-1 text-xl md:text-base text-grey--50 font-semibold ">
 							Lançamento:{' '}
 							<span className="font-normal text-bluegray--800 text-xl">
 								{details.release}
@@ -85,7 +87,6 @@ export const Details = () => {
 							Adicionar
 						</Button>
 					</div>
-					
 				</section>
 			) : (
 				<ImSpinner8 size={72} className="block animate-spin mx-auto" />
