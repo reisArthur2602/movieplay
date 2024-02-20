@@ -11,6 +11,8 @@ export const App = () => {
 				<Header />
 				<AppRoutes />
 			</Container>
+	
 		</BrowserRouter>
+		
 	);
 };

@@ -12,5 +12,5 @@ export const Button = ({ children, handle, className }) => {
 		>
 			{children}
 		</button>
-	);
+		
 };
