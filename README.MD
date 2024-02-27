@@ -2,8 +2,7 @@
 <img src="./src/assets/home.png" alt="moviePlay" />
 
 ### 💡Sobre o projeto
-Este projeto foi criado para colocar em prática os conhecimentos adquiridos de Reactjs,TailwindCss. <br>
-O Projeto foi elaborado com a finalidade de usado como um catálogo de filmes que estão em alta, além de utilizar conceitos como react-router-dom para a navegação entre páginas , html semântico , criação de váriaveis e responsividade no tailwind, e consumo de apis </p>
+Esse projeto foi desenvolvido para aplicar os conhecimentos adquiridos em React.js e Tailwind CSS. Tem como propósito funcionar como um catálogo de filmes populares, incorporando conceitos como react-router-dom para a navegação entre páginas, uso de HTML semântico, criação de variáveis e implementação de responsividade com Tailwind, além do consumo de APIs.
 
 ### 💻Tecnologias usadas
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
